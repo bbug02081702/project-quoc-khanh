@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Chào mừng ngày quốc khánh Việt Nam</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+        body{
+            background-color: red;
+        }
+        .bbugsoft-team-container {
+            position: absolute;
+            margin: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+        .bbugsoft-team-flag {
+            margin: 50px;
+            width: 300px;
+            height: 200px;
+    
+        }
+        .bbugsoftFlag {
+            position: relative;
+            width: 1px; 
+            height: 100%;
+            display: inline-block;
+            background-image: url('./assets/images/flag-vn.png');
+            background-size: 300px 100%;
+            background-position: center center;
+            animation: wave 1s ease-in-out infinite alternate;
+        }
+        @keyframes wave{
+            0%{
+                top: 5%;
+            }
+            100%{
+                top: -5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bbugsoft-team-container">
+        <div class="bbugsoft-team-flag"></div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var w = $('.bbugsoft-team-flag').width();
+            for (var i = 0; i < w; i++) {
+                var bbugsoftFlag = $("<div class='bbugsoftFlag'>");
+                bbugsoftFlag.css('background-position', -i + "px 0");
+                bbugsoftFlag.css('animation-delay', i * 10 + 'ms');
+                $('.bbugsoft-team-flag').append(bbugsoftFlag);
+            }
+        });
+    </script>
+</body>
+</html>

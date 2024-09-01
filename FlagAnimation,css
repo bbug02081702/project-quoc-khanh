@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+.bbugsoft-team-container {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bbugsoft-team-flag {
+    margin: 50px;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    overflow: hidden; /* Đảm bảo không có phần tử bị tràn */
+}
+
+.bbugsoftFlag {
+    position: absolute;
+    width: 300px; /* Kích thước của hình nền */
+    height: 200px; /* Kích thước của hình nền */
+    background-image: url('./assets/images/flag-vn.png');
+    background-size: 300px 100%;
+    background-position: center center;
+    animation: wave 1s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+    0% {
+        top: 5%;
+    }
+    100% {
+        top: -5%;
+    }
+}
